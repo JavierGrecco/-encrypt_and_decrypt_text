@@ -7,8 +7,10 @@ clave = procesos.cargar_clave()
 
 archivo = "texto.txt"
 
+
+
 while opcion !=6:
-    
+ try:
     print("\nSeleciona una opción")
     print("\n1 - Leer Archivo\n2 - Agregar Texto al Archivo\n3 - Encriptar\n4 - Desencriptar\n5 - Borrar Archivo\n6 - Salir")
     opcion = int(input("\nIngresa una opción: "))
@@ -31,5 +33,6 @@ while opcion !=6:
       print(exit())
     else:
         print("\nLa opción seleccionadda es incorrecta")
-    
-
+        
+ except ValueError:
+     print("Ingresar un numero")
